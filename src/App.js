@@ -27,7 +27,23 @@ function App() {
     );
   }
 
-  return <h2>tabs project setup</h2>;
+  const { company, dates, duties, title } = jobs[value];
+
+  return (
+    <section className="section">
+      <div className="title">
+        <h2>experience</h2>
+        <div className="underline"></div>
+        <div className="jobs-center">
+          {/* btn container */}
+          {/* job info */}
+          <article className="job-info">
+            <h3>{title}</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
 }
 
 export default App;
