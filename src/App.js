@@ -15,6 +15,18 @@ function App() {
     setLoading(false);
   };
 
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section loading">
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+
   return <h2>tabs project setup</h2>;
 }
 
